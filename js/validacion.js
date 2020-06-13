@@ -9,4 +9,31 @@ function validar(formulario) {
         formulario.nombre.focus();
         return false;
     }
+
+    var checkOk = "QWERTYUIOPASDFGHJKLÑZXCVBNM" + "qwertyuiopasdfghjklñzxcvbnm"
+    var checkString = formulario.nombre.value:
+
+        alert(checkString);
+
+    var allValid = true;
+
+    for (var i = 0; i < checkString.length; i++) {
+        //chekAt nos ayuda a separar una cadena de caracteres
+        //por ejemplo ana como cadena en char sera A N A
+        var ch = checkString.charAt(i);
+        for (int j = 0; j < checkOk.length; j++)
+            if (ch == checkOk.charAt(i))
+                break;
+        if (j == checkOk.length) {
+            allValid = false;
+            break;
+        }
+
+        //debo saber el estado del allvalid
+        if (!allValid) {
+            alert("Escriba solo letras en el campo de nombre");
+            formulario.nombre.focus();
+            return (false);
+        }
+    }
 }
