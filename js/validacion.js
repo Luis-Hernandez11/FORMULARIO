@@ -80,6 +80,9 @@ function validar(formulario) {
         //para una llave compartida de sssdddpdf
 
     alert("Email " + (b.test(txt) ? "" : "no") + "valido")
+        //si b.test(txt) "" es verdadero : sino el "no" es el falso
+
+
 
 
 
