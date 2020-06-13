@@ -29,11 +29,58 @@ function validar(formulario) {
             break;
         }
 
-        //debo saber el estado del allvalid
-        if (!allValid) {
-            alert("Escriba solo letras en el campo de nombre");
-            formulario.nombre.focus();
-            return (false);
-        }
     }
+
+    //debo saber el estado del allvalid
+    if (!allValid) {
+        alert("Escriba solo letras en el campo de nombre");
+        formulario.nombre.focus();
+        return (false);
+    }
+
+    //formulario edad
+    if (formulario.edad.value.length < 2) {
+        alert("Escriba maximo dos digitos, o la maxima edad de 99");
+        //focus nos auida a focalizar donde eta el error del llenado
+        //realiza un posicioamiento al elemento del formulario
+        formulario.edad.focus();
+        return false;
+    }
+
+    var checkOk = "123456789";
+    var checkString = formulario.edad.value:
+
+        alert(checkString);
+
+    var allValid = true;
+    //debo saber si edad es all
+    if (!allValid) {
+        alert("Escriba solo numeros en el campo numerico");
+        formulario.edad.focus();
+        return (false);
+    }
+
+    //correo
+
+    if (formulario.correo.value.length < 5) {
+        alert("Escriba el correo con el formato xxx.xxx.x");
+        //focus nos auida a focalizar donde eta el error del llenado
+        //realiza un posicioamiento al elemento del formulario
+        formulario.correo.focus();
+        return false;
+    }
+
+    var txt = formulario.correo.value;
+    //expresion regular
+    var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/
+        //ejemplo@ejemplo
+        //ejemplo@ejemplo.ejemplo
+        //todo lo que esta adentro de los corchetes es la expresion
+        //existen cadenas para creacion de curp
+        //para una llave compartida de sssdddpdf
+
+    alert("Email " + (b.test(txt) ? "" : "no") + "valido")
+
+
+
 }
